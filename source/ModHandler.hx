@@ -2,6 +2,11 @@ package;
 
 import flixel.FlxG;
 
+#if sys
+import sys.FileSystem;
+import sys.io.File;
+#end
+
 #if FUTURE_POLYMOD
 import polymod.Polymod;
 import polymod.backends.PolymodAssets.PolymodAssetType;
