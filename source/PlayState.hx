@@ -7,6 +7,8 @@ class PlayState extends FlxState {
 	override public function create() {
 		super.create();
 
+		ModHandler.reload();
+
 		var text = new FlxText(0, 0, 0, "Hello World", 64);
 		text.screenCenter();
 		add(text);

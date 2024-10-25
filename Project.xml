@@ -26,6 +26,10 @@
 	<!-- Mobile -->
 	<window if="mobile" orientation="landscape" fullscreen="true" width="0" height="0" />
 
+	<!-- _____________________________ Custom Defines ____________________________ -->
+
+	<define name="FUTURE_POLYMOD" if="desktop" />
+
 	<!-- _____________________________ Path Settings ____________________________ -->
 
 	<set name="BUILD_DIR" value="export/debug" if="debug" />
@@ -33,6 +37,8 @@
 
 	<source path="source" />
 	<assets path="assets" exclude="*.mp3" unless="web" />
+
+	<assets path="mods" if="FUTURE_POLYMOD" />
 
 	<!-- _______________________________ Libraries ______________________________ -->
 
@@ -47,6 +53,9 @@
 
 	<!-- In case you want to use the tools package -->
 	<haxelib name="flixel-tools" />
+
+	<!-- In case you want to use the modding framework -->
+	<haxelib name="polymod" if="FUTURE_POLYMOD" />
 
 	<!-- ______________________________ Haxedefines _____________________________ -->
 
@@ -73,6 +82,9 @@
 
 	<!-- Pretty error reporting -->
 	<haxedef name="message.reporting" value="pretty" />
+
+	<!-- For polymod -->
+	<haxedef name="POLYMOD_DEBUG" value="true" if="debug" />
 
 	<!-- _________________________________ Custom _______________________________ -->
 
